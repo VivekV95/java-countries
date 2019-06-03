@@ -1,4 +1,4 @@
-package com.vivekvishwanath.javacountries
+package com.vivekvishwanath.javacountries.Main
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
