@@ -4,7 +4,7 @@ import com.vivekvishwanath.javacountries.Models.Country
 
 class CountryList {
 
-    val countryList = ArrayList<Country>()
+    val countryList = mutableListOf<Country>()
     init {
         countryList.add(Country("China", 1420062022, 9388211, 39))
         countryList.add(Country("India", 1368737513, 2973190, 28))
