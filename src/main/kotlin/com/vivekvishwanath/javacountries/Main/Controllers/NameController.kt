@@ -15,9 +15,9 @@ class NameController {
     @GetMapping(value = ["/all"], produces = ["application/json"])
     fun getAllNames(): ResponseEntity<Any> {
         val names = ArrayList<String>()
-        JavaCountriesApplication.myCountryList.countryList.
-                sortBy {country -> country.name}
-        for (country in JavaCountriesApplication.myCountryList.countryList) {
+        val tempCountries = JavaCountriesApplication.myCountryList.countryList.
+                sortedBy {it.name}
+        for (country in tempCountries) {
             names.add(country.name)
         }
         return ResponseEntity(names, HttpStatus.OK)
@@ -36,7 +36,5 @@ class NameController {
                 filter {it.name.length >= length}
         return ResponseEntity(tempCountries, HttpStatus.OK)
     }
-
-
 
 }
